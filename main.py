@@ -100,20 +100,20 @@ def stat_check():
     if tie_stopper:
         return
     global confusion, damages, thinking
-    if confusion >= 6:
+    if confusion >= 10:
         endgame.config(text="You finally lose your temper with the wretched creature and confront it.\n"
                             "The argument is brief.\n"
                             "You have no idea what it is trying to tell you, and eventually\n"
                             "it crushes you to death using its trunk.")
         next_button.config(text="Leave your mastodon to your nearest relative.", command=start_over)
-    if damages >= 6:
+    if damages >= 10:
         endgame.config(text="You lose all your money\n"
                             "Your livelihood is destroyed\n"
                             "All reduced to gigantic footprints in the ashes\n"
                             "The mastodon abandons you in search of somone else to inconvenience."
                     )
         next_button.config(text="Lets look in on its next victim", command=start_over)
-    if thinking >= 6:
+    if thinking >= 10:
         endgame.config(text="Mastodons are not for you.  You slip away into the night\n"
                             "with the last of your remaining savings, faking your death.\n"
                             "Perhaps you'll build a gigantic pillowfort.\n"
